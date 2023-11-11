@@ -1,0 +1,176 @@
+*{
+
+}
+
+body{
+    background-image: url(image/pexels-greta-hoffman-9475666.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.kenny{
+    color: white;
+    text-decoration: underline;
+    font-size: 40px;
+    margin-left: -30px ;
+    transition: 2s;
+}
+
+.kenny:hover{
+    transform: scale(1.05);
+}
+
+#innerdiv{
+    margin-left: 150px;
+    margin-top: 50px;
+    background-color:
+}
+#container{
+    margin-left: 450px;
+    border-radius:5px ;
+    background-color: navy;
+    width: 500px;
+    height: 500px;
+    margin-top: 90px;
+    padding: 10px;
+    
+}
+
+
+#items{
+    margin-left: -5px;
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    color: teal;
+    border-color: goldenrod;
+}
+
+ #disp {
+    height: 100px;
+    width: 200px;
+    margin-left: 620px;
+    margin-top: -300px;
+    overflow: auto;
+    text-overflow: ellipsis;
+    border-radius: 5px;
+    border-color: goldenrod;
+    border-style: double;
+    color: white;
+
+} 
+
+#Addtocartbutton{
+    margin-left: 120px;
+    background-color: white;
+    width: 100px;
+    height: 30px;
+    border-color: goldenrod;
+    color: teal;
+    border-radius: 5px;
+    transform: translateY(-32px);
+    transition: 1s;
+    
+}
+
+ #Addtocartbutton:hover{
+  background-color: teal;
+  color: white;
+  
+
+} 
+
+.actions{
+    margin-left: 150px; 
+    margin-top: 150px;
+    
+}
+
+.secondActions{
+margin-top: 20px;
+margin-left: 140px ;
+
+}
+
+#EditAny{
+    background-color: white;
+    height: 30px;
+    color: teal;
+    border-radius: 5px;
+    border-color: goldenrod;
+
+}
+
+#EditAny:hover{
+    background-color: teal;
+    color: white;
+}
+
+
+#Addstartbutton{
+    background-color: white;
+height: 30px;
+color: teal;
+border-radius: 5px;
+border-color: goldenrod;
+}
+
+#Addstartbutton:hover{
+    background-color: teal;
+    color: white;
+}
+
+#Deletelastbutton{
+    background-color: white;
+    height: 30px;
+    color: teal;
+    border-radius: 5px;
+    border-color: goldenrod;
+    
+}
+
+#Deletelastbutton:hover{
+    background-color: teal;
+    color: white;
+}
+#DeleteAnybutton{
+    background-color: white;
+    height: 30px;
+    color: teal;
+    border-radius: 5px;
+    border-color: goldenrod;
+}
+#DeleteAnybutton:hover{
+    background-color: teal;
+    color: white;
+}
+#DeleteFirstbutton{
+    background-color: white;
+height: 30px;
+color: teal;
+border-radius: 5px;
+border-color: goldenrod;
+
+}
+#DeleteFirstbutton:hover{
+    background-color: teal;
+    color: white;
+}
+
+#DeleteAll{
+    margin-top: 10px;
+    background-color: white;
+    color: teal;
+    height: 30px;
+    border-radius: 5px;
+    border-color: goldenrod;
+}
+#DeleteAll:hover{
+    background-color: teal;
+    color: white;
+}
+
+#showErr{
+    color:  red;
+    margin-left: 30px;
+    margin-top: -15px;
+}

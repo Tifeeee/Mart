@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matt Mart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="container">
+    <div id="innerdiv">
+        <h1 class="kenny">MATT MART</h1>
+        <div><input type="text" placeholder="Item" id="items"></div>
+        <button onclick="addItem()" id="Addtocartbutton">Add to cart</button>
+        <div id="showErr"></div>
+    </div>
+    
+    <div class="actions">
+        <button onclick="deleteAny()" id="DeleteAnybutton">Delete any</button>
+        <button onclick="editAny()" id="EditAny">Edit Any</button>
+        <button onclick="deleteAll()" id="DeleteAll">Delete All</button>
+    </div>
+
+    <div class="secondActions">
+        <button onclick="addStart()" id="Addstartbutton">Add start</button>
+        <button onclick="deleteLast()"id="Deletelastbutton">Delete Last</button>
+        <button onclick="deleteFirst()" id="DeleteFirstbutton">Delete First</button>
+    </div>
+</div>
+    <div id="disp"></div>
+    <div id="showArray"></div>
+    <div id="Show"></div>
+
+    <script>
+        var allItems = []
+        function addItem() {
+            var item = document.getElementById("items").value
+
+            if (item == "") {
+                showErr.innerHTML = `<p>Space must be filled!</p>`
+                displayItems()
+            }else {
+                showErr.innerHTML = ""
+                allItems.push(item)
+                items.value = ""
+                console.log(allItems);
+                displayItems()
+            }
+        }
+        
+        function deleteLast() {
+            allItems.pop()
+            displayItems()
+        }
+
+        function addStart() {
+            var newItem = prompt("Enter your new item")
+            allItems.unshift(newItem)
+            displayItems()
+        }
+
+        function displayItems() {
+            disp.innerHTML = ""
+            for (i=0; i < allItems.length; i++) {
+                var element = allItems[i]
+                disp.innerHTML += `<p>${i+1}.&nbsp;${element}</p>`
+            }
+        }
+
+        function deleteFirst() {
+            allItems.shift()
+            displayItems()
+        }
+
+        function deleteAny(){
+            var delAny= prompt("Enter the name of the item you are deleting")
+            itemToDelete = allItems.indexOf(delAny);
+
+            if(itemToDelete => 1){
+                allItems.splice(itemToDelete,1)
+            }
+            displayItems()
+        }
+
+    function editAny() {
+        var oldItem = prompt('Enter the name of the item you want to edit');
+
+        if (oldItem == "") {
+            alert('Please enter a valid item');
+        } else {
+            let foundItem = allItems.find(item => item === oldItem);
+
+            if (foundItem) {
+                var newItem = prompt('Enter the new name for the item');
+                allItems[allItems.indexOf(foundItem)] = newItem;
+                displayItems();
+            } else {
+                alert('Item not found!');
+            }
+        }
+    }
+
+        function deleteAll(){
+            var check = confirm("Are you sure you want to delete?")
+
+            if(check==true){
+                if (allItems.length > 0){
+                   displayItems(allItems.splice(0, allItems.length));
+                }
+            }else {
+                console.log(allItems);
+                displayItems()
+            }
+            }
+
+        //  var allNames =['vgv','ghhk','vgjfv','hghyjh','ghvhg','gjh','gfgj','gf']
+        //  console.log(allNames)
+         
+        //  allNames.map((names,index)=>{
+        //  Show.innerHTML += `<p> ${index+1}.${names}</p>`
+        // })
+
+        // for (index = 0; index < allItems.length; index++) {
+        //     var element = allItems[index];
+        //     showArray.innerHTML += `<p>${names}</p>
+            
+        // }
+
+
+
+
+        
+
+
+
+    </script>
+
+</body>
+
+</html>
